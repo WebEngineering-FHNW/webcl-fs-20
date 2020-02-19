@@ -1,33 +1,59 @@
+:root {
+    --base-color: #d4e8ed;
+    --danger-color: #edb29c;
+}
+
 *,
 h1,
 input[type="text"] {
-    font-family: helvetica, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
 }
 
 h1 {
-    font-weight: lighter;
     font-size: 40px;
-    font-variant-caps: all-petite-caps;
+    font-weight: 700;
+}
+
+body {
+    background-color: var(--base-color);
 }
 
 main {
-    border-radius: 25px;
-    -webkit-box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-    -moz-box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-    box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-}
-
-button,
-.delete {
-    -webkit-box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-    -moz-box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-    box-shadow: 10px 12px 37px -7px rgba(0, 0, 0, 0.49);
-    border-radius: 10px;
+    border-radius: 50px;
+    background-color: var(--base-color);
+    box-shadow: 20px 20px 60px #b4c5c9, -20px -20px 60px #f4ffff;
 }
 
 button {
-    background-color: #fefefe;
-    border: 1px solid #fefefe;
+    background: var(--base-color);
+    border-radius: 50px;
+    border: none;
+    box-shadow: 20px 20px 60px #b4c5c9, -20px -20px 60px #f4ffff;
+}
+
+.action-buttons {
+    margin-top: 15px;
+}
+
+.action-buttons button {
+    position: initial !important;
+    margin-right: 15px;
+}
+
+#fortune {
+    padding: 10px;
+    font-size: 20px;
+    height: 50px;
+}
+
+#plus {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 35px;
+    line-height: 20px;
+    vertical-align: bottom;
+    color: #007f1f;
 }
 
 #todoContainer {
@@ -35,12 +61,13 @@ button {
 }
 
 .delete {
-    background-color: red;
-    color: #fff;
+    color: var(--danger-color);
     width: 50px;
     height: 50px;
-    display: inline-block;
+    font-size: 30px;
 }
+
+.delete:hover {}
 
 input[type='text'] {
     padding: 10px;
