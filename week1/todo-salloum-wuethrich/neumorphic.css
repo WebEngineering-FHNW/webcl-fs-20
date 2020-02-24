@@ -1,0 +1,218 @@
+:root {
+    --base-color: #ebecf0;
+    --shadow-color: #BABECC;
+    --highlight-color: white;
+    --danger-color: #ed3134;
+    --plus-color: #007f1f;
+    --shadow: -5px -5px 20px var(--highlight-color), 5px 5px 20px var(--shadow-color);
+    --shadow-small: -2px -2px 5px var(--highlight-color), 2px 2px 5px var(--shadow-color);
+    --shadow-inset: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    --shadow-inset-small: inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+}
+
+* {
+    font-family: "Helvetica Neue", sans-serif;
+    color: #9296a2;
+    font-size: 16px;
+    text-shadow: 1px 1px 0 var(--highlight-color);
+}
+
+#todoContainer {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-columns: 50px auto 50px;
+    margin-bottom: 0.5em;
+}
+
+.holder {
+    margin: 0 3em 0 3em;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+body {
+    margin-top: 4em;
+    background-color: var(--base-color);
+}
+
+main {
+    max-width: 40em;
+    margin: auto;
+    padding: 2em;
+    border-radius: 50px;
+    background-color: var(--base-color);
+    box-shadow: 20px 20px 60px var(--shadow-color), -20px -20px 60px var(--highlight-color);
+}
+
+button {
+    background: var(--base-color);
+    border-radius: 50px;
+    border: none;
+    box-shadow: var(--shadow);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: var(--shadow-small);
+}
+
+.action-buttons {
+    margin-top: 15px;
+}
+
+.action-buttons button {
+    position: initial !important;
+    margin-right: 15px;
+    text-align: center;
+}
+
+#fortune {
+    padding: 16px;
+    height: 50px;
+}
+
+#plus {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    font-size: 35px;
+    line-height: 20px;
+    vertical-align: bottom;
+    color: var(--plus-color);
+}
+
+#todoContainer {
+    margin: 2em 0;
+}
+
+.delete {
+    color: var(--danger-color);
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+}
+
+
+/*
+https://codepen.io/swapnet/pen/QWwPVwE (text field)
+*/
+
+input[type='text'] {
+    border: 0;
+    outline: 0;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: var(--base-color);
+    box-shadow: var(--shadow-inset);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type='text']:focus {
+    box-shadow: var(--shadow-inset-small);
+}
+
+/*
+https://codepen.io/drovosek2703/pen/VwYRZrM for checkbox
+*/
+
+
+input[type='checkbox'] {
+    outline: none;
+    box-shadow: var(--shadow-inset);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    margin: 0;
+    width: 50px;
+    border-radius: 50px;
+}
+
+input[type='checkbox']:hover {
+    box-shadow: var(--shadow-inset-small);
+}
+
+input[type='checkbox']::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--shadow-color);
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .25s ease;
+}
+
+input[type='checkbox']:checked {
+    box-shadow: var(--shadow-inset-small);
+}
+
+input[type='checkbox']:checked:hover {
+    box-shadow: var(--shadow-inset);
+}
+
+input[type='checkbox']:checked::after {
+    background-color: var(--shadow-color);
+}
+
+div.footer {
+    text-align: center;
+}
+
+div.footer>div {
+    background: var(--base-color);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: inline-block;
+    margin-right: 9%;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+div.footer>div:last-child {
+    margin-right: 0;
+}
+
+div.footer>div>span {
+    font-size: 35px;
+    display: block;
+    margin: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        box-shadow: none;
+    }
+    input[type='text'] {
+        width: 100%;
+    }
+    body {
+        margin: 0;
+    }
+    main {
+        padding: 1em;
+    }
+    .holder {
+        margin: 0;
+    }
+    div.footer>div {
+        width: 100%;
+    }
+}
