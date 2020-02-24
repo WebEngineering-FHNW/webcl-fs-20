@@ -190,11 +190,13 @@ div.footer>div {
     display: inline-block;
     margin-right: 15px;
     width: 30%;
-    font-size: 20px;
 }
 
 div.footer>div>span {
-    font-size: 20px;
+    font-size: 35px;
+    display: block;
+    margin: 5px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 700px) {
