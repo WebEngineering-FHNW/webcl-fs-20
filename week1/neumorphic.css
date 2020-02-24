@@ -220,4 +220,7 @@ div.footer>div>span {
     .holder {
         margin: 0;
     }
+    div.footer>div {
+        width: 100%;
+    }
 }
