@@ -120,34 +120,26 @@ input[type='text']:focus {
     box-shadow: var(--shadow-inset-small);
 }
 
-input[type='checkbox'] {
-    margin: 10px 0;
-    outline: none;
-}
+/*
+https://codepen.io/drovosek2703/pen/VwYRZrM for checkbox
+*/
+
 
 input[type='checkbox'] {
+    outline: none;
     box-shadow: var(--shadow-inset);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
     -webkit-appearance: none;
+    position: relative;
+    margin: 0;
+    width: 50px;
+    border-radius: 50px;
 }
 
 input[type='checkbox']:hover {
     box-shadow: var(--shadow-inset-small);
-}
-
-
-/*
-https://codepen.io/drovosek2703/pen/VwYRZrM for checkbox
-*/
-
-input[type='checkbox'] {
-    position: relative;
-    margin: 0;
-    width: 50px;
-    transition: all .25s ease;
-    border-radius: 50px;
 }
 
 input[type='checkbox']::after {
