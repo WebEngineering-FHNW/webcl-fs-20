@@ -1,34 +1,77 @@
+/*
+
+Sources:
+https://codepen.io/drovosek2703/pen/VwYRZrM (checkbox)
+https://codepen.io/swapnet/pen/QWwPVwE (text fields & buttons)
+
+*/
+
+/* white version */
 :root {
-    --base-color: #d4e8ed;
-    --danger-color: #edb29c;
+    --base-color: #ebecf0;
+    --shadow-color: #BABECC;
+    --highlight-color: white;
+    --danger-color: #ed3134;
+    --plus-color: #007f1f;
 }
 
-*,
-h1,
-input[type="text"] {
+/* black version */
+/*:root {
+    --base-color: #141414;
+    --shadow-color: #040505;
+    --highlight-color: #2d2d2d;
+    --danger-color: #ed3134;
+    --plus-color: #007f1f;
+}*/
+
+* {
     font-family: "Helvetica Neue", sans-serif;
+    color: #9296a2;
+    font-size: 16px;
+}
+
+#todoContainer {
+    display:        grid;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 1em;
+    grid-template-columns: 3.8em auto 3.8em;
+    margin-bottom:  0.5em ;
+}
+
+.holder {
+    margin: 0 3em 0 3em;
 }
 
 h1 {
     font-size: 40px;
     font-weight: 700;
+    text-align: center;
 }
 
 body {
+    margin-top:     2em;
     background-color: var(--base-color);
 }
 
 main {
+    max-width:  40em;
+    margin:     auto;
+    padding:    2em;
     border-radius: 50px;
     background-color: var(--base-color);
-    box-shadow: 20px 20px 60px #b4c5c9, -20px -20px 60px #f4ffff;
+    /*box-shadow: 20px 20px 60px var(--shadow-color), -20px -20px 60px var(--highlight-color);*/
 }
 
 button {
     background: var(--base-color);
     border-radius: 50px;
     border: none;
-    box-shadow: 20px 20px 60px #b4c5c9, -20px -20px 60px #f4ffff;
+    box-shadow: -5px -5px 20px var(--highlight-color),  5px 5px 20px var(--shadow-color);
+    outline:none;
+}
+
+button:hover {
+    box-shadow: -2px -2px 5px var(--highlight-color), 2px 2px 5px var(--shadow-color);
 }
 
 .action-buttons {
@@ -41,8 +84,8 @@ button {
 }
 
 #fortune {
-    padding: 10px;
-    font-size: 20px;
+    padding: 16px;
+    /*font-size: 20px;*/
     height: 50px;
 }
 
@@ -53,7 +96,7 @@ button {
     font-size: 35px;
     line-height: 20px;
     vertical-align: bottom;
-    color: #007f1f;
+    color: var(--plus-color);
 }
 
 #todoContainer {
@@ -64,23 +107,85 @@ button {
     color: var(--danger-color);
     width: 50px;
     height: 50px;
-    font-size: 30px;
+    font-size: 35px;
 }
-
-.delete:hover {}
 
 input[type='text'] {
-    padding: 10px;
-    color: #000;
-    margin-left: 50px;
-    font-size: 20px;
-    font-weight: lighter;
+    border: 0;
+    outline: 0;
+    border-radius: 320px;
+    padding: 16px;
+    background-color:  var(--base-color);
+    text-shadow: 1px 1px 0 var(--highlight-color);
+    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-input[type=text]:focus {
-    /* background-color: #fefefe; */
+input[type='text']:focus {
+    box-shadow:  inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+
 }
 
 input[type='checkbox'] {
     margin: 10px 0;
+    outline:none;
+}
+
+input[type='checkbox'] {
+    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type='checkbox']:hover {
+    box-shadow:  inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+}
+
+input[type='checkbox'] {
+    padding: 20px;
+    position: relative;
+    margin: 0 5px;
+    width: 50px;
+    transition: all .25s ease;
+    border-radius: 50px;
+}
+
+input[type='checkbox']::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #a3aab9;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .25s ease;
+}
+
+input[type='checkbox']:checked {
+    box-shadow:  inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+}
+
+input[type='checkbox']:checked:hover {
+    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+}
+
+input[type='checkbox']:checked::after {
+    background-color: #a3aab9;
+}
+
+div.footer > div {
+    background: var(--base-color);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: -5px -5px 20px var(--highlight-color),  5px 5px 20px var(--shadow-color);
 }
