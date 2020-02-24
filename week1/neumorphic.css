@@ -188,8 +188,13 @@ div.footer>div {
     text-align: center;
     box-shadow: var(--shadow);
     display: inline-block;
-    margin-right: 15px;
-    width: 30%;
+    margin-right: 9%;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+div.footer>div:last-child {
+    margin-right: 0;
 }
 
 div.footer>div>span {
