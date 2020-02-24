@@ -4,19 +4,24 @@
     --highlight-color: white;
     --danger-color: #ed3134;
     --plus-color: #007f1f;
+    --shadow: -5px -5px 20px var(--highlight-color), 5px 5px 20px var(--shadow-color);
+    --shadow-small: -2px -2px 5px var(--highlight-color), 2px 2px 5px var(--shadow-color);
+    --shadow-inset: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    --shadow-inset-small: inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
 }
 
 * {
     font-family: "Helvetica Neue", sans-serif;
     color: #9296a2;
     font-size: 16px;
+    text-shadow: 1px 1px 0 var(--highlight-color);
 }
 
 #todoContainer {
     display: grid;
-    grid-column-gap: 0.5em;
+    grid-column-gap: 1em;
     grid-row-gap: 1em;
-    grid-template-columns: 3.8em auto 3.8em;
+    grid-template-columns: 50px auto 50px;
     margin-bottom: 0.5em;
 }
 
@@ -31,7 +36,7 @@ h1 {
 }
 
 body {
-    margin-top: 2em;
+    margin-top: 4em;
     background-color: var(--base-color);
 }
 
@@ -48,12 +53,13 @@ button {
     background: var(--base-color);
     border-radius: 50px;
     border: none;
-    box-shadow: -5px -5px 20px var(--highlight-color), 5px 5px 20px var(--shadow-color);
+    box-shadow: var(--shadow);
     outline: none;
+    transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    box-shadow: -2px -2px 5px var(--highlight-color), 2px 2px 5px var(--shadow-color);
+    box-shadow: var(--shadow-small);
 }
 
 .action-buttons {
@@ -82,7 +88,7 @@ button:hover {
 }
 
 #todoContainer {
-    margin: 25px 0;
+    margin: 2em 0;
 }
 
 .delete {
@@ -103,8 +109,7 @@ input[type='text'] {
     border-radius: 320px;
     padding: 16px;
     background-color: var(--base-color);
-    text-shadow: 1px 1px 0 var(--highlight-color);
-    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    box-shadow: var(--shadow-inset);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
@@ -112,7 +117,7 @@ input[type='text'] {
 }
 
 input[type='text']:focus {
-    box-shadow: inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+    box-shadow: var(--shadow-inset-small);
 }
 
 input[type='checkbox'] {
@@ -121,7 +126,7 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox'] {
-    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    box-shadow: var(--shadow-inset);
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
     appearance: none;
@@ -129,7 +134,7 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:hover {
-    box-shadow: inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+    box-shadow: var(--shadow-inset-small);
 }
 
 
@@ -138,9 +143,8 @@ https://codepen.io/drovosek2703/pen/VwYRZrM for checkbox
 */
 
 input[type='checkbox'] {
-    padding: 20px;
     position: relative;
-    margin: 0 5px;
+    margin: 0;
     width: 50px;
     transition: all .25s ease;
     border-radius: 50px;
@@ -152,7 +156,7 @@ input[type='checkbox']::after {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 2px solid #a3aab9;
+    border: 2px solid var(--shadow-color);
     background: transparent;
     top: 50%;
     left: 50%;
@@ -161,15 +165,15 @@ input[type='checkbox']::after {
 }
 
 input[type='checkbox']:checked {
-    box-shadow: inset 1px 1px 2px var(--shadow-color), inset -1px -1px 2px var(--highlight-color);
+    box-shadow: var(--shadow-inset-small);
 }
 
 input[type='checkbox']:checked:hover {
-    box-shadow: inset 2px 2px 5px var(--shadow-color), inset -5px -5px 10px var(--highlight-color);
+    box-shadow: var(--shadow-inset);
 }
 
 input[type='checkbox']:checked::after {
-    background-color: #a3aab9;
+    background-color: var(--shadow-color);
 }
 
 div.footer>div {
@@ -178,7 +182,7 @@ div.footer>div {
     margin-bottom: 16px;
     border-radius: 5px;
     text-align: center;
-    box-shadow: -5px -5px 20px var(--highlight-color), 5px 5px 20px var(--shadow-color);
+    box-shadow: var(--shadow);
 }
 
 @media screen and (max-width: 700px) {
