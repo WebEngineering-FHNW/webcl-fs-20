@@ -176,6 +176,10 @@ input[type='checkbox']:checked::after {
     background-color: var(--shadow-color);
 }
 
+div.footer {
+    text-align: center;
+}
+
 div.footer>div {
     background: var(--base-color);
     padding: 16px;
@@ -183,6 +187,14 @@ div.footer>div {
     border-radius: 5px;
     text-align: center;
     box-shadow: var(--shadow);
+    display: inline-block;
+    margin-right: 15px;
+    width: 30%;
+    font-size: 20px;
+}
+
+div.footer>div>span {
+    font-size: 20px;
 }
 
 @media screen and (max-width: 700px) {
