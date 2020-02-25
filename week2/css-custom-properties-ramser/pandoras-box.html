@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Custom Properties</title>
+    <style>
+        :root {
+            --color: red;
+            --background-color: var(--color);
+            --color: green;
+        }
+        .test-1 {
+            background: var(--background-color);
+        }
+        :root {
+            --color: orange;
+        }
+        body {
+            --color: greenyellow;
+            /* --background-color: var(--color); 1 */
+        }
+        .test-2 {
+            --color: purple; /* 2 */
+            /* --background-color: var(--color); 2 */
+            background: var(--background-color);
+        }
+        .test-3 {
+            --color: grey;
+            --background-color: var(--color);
+            background: var(--background-color);
+        }
+        .test-4 {
+            background: var(--background-color);
+            --background-color: var(--color);
+            --color: black;
+        }
+        /* Checkout DOM in Chrome DevTools */
+    </style>
+</head>
+<body>
+    <div class="test-1">Test1</div>
+    <div class="test-2">Test2</div>
+    <div class="test-3">Test3</div>
+    <div class="test-4">Test4</div>
+</body>
+</html>
