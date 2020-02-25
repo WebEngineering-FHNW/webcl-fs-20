@@ -5,9 +5,15 @@
     <title>CSSValidation</title>
     <style>
 
-        /* todo: style the form */
+        form {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-gap: 0 1em;
+        }
 
-        /* todo: style invalid input */
+        input:invalid {
+            color: red;
+        }
 
     </style>
 </head>
