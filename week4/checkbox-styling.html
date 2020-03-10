@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkbox</title>
+  <style>
+    input[type=checkbox] + label + span {
+      visibility: hidden;
+    }
+    input[type=checkbox]:checked + label + span {
+      visibility: visible;
+    }
+    .custom-checkbox,
+    .display-none::before,
+    .appearance-none::before {
+      --arrow-size: 20px;
+      content:    '';
+      display:    inline-block;
+      position:   relative;
+      top:        0.3em;
+      width:      var(--arrow-size);
+      height:     var(--arrow-size);
+      background: darkgray;
+      --arrow-down: polygon(0 0, 100% 0%, 50% 100%);
+      -webkit-clip-path: var(--arrow-down);
+      clip-path:         var(--arrow-down);
+      transition: transform 0.5s;
+    }
+
+    .display-none:checked::before,
+    .appearance-none:checked::before,
+    .custom-checkbox:checked{
+      transform: rotate(calc(2 * 360deg - 90deg));
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .appearance-none {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .custom-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+<body>
+
+<input id="display-none-cb" type="checkbox" class="display-none" />
+<label for="display-none-cb">Display: None</label><span> =&nbsp;Checked</span><br />
+
+<input id="appear-none-cb" type="checkbox" class="appearance-none" />
+<label for="appear-none-cb">Appearance: None</label><span> =&nbsp;Checked</span><br/>
+
+<input id="appear-none-cb2" type="checkbox" class="custom-checkbox" />
+<label for="appear-none-cb2">Appearance: None + Custom Styling</label><span> =&nbsp;Checked</span><br/>
+
+</body>
+</html>
