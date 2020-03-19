@@ -19,3 +19,12 @@ Ever wondered how to draw triangles using pure CSS? Find out by studying the fol
 As we now know how to draw triangles, we proceed to build a collapsible section with a rotating triangle to indicate its status.
 - [CSS Goodie - collapsible section with pure CSS](https://webengineering-fhnw.github.io/webcl-fs-20/week4/CSSCollapse.html): Explains how to build a collapsible section using pure CSS 
 - [The projector pattern](https://webengineering-fhnw.github.io/webcl-fs-20/week4/todo/View.html)
+
+## week 5
+How to build a button with a rainbow colored back blur using an anchor element
+- [CS Goodie - back blur](https://webengineering-fhnw.github.io/webcl-fs-20/week5/BackBlur.html)
+    - using [Flex](https://developer.mozilla.org/de/docs/Glossary/Flex)
+    - using [Pseudo-element](https://developer.mozilla.org/de/docs/Glossary/Pseudo-element)
+    - using [filter](https://developer.mozilla.org/de/docs/Web/CSS/filter)
+    - using [linear-gradient](https://developer.mozilla.org/de/docs/Web/CSS/linear-gradient)
+- [The projector pattern - Persons](https://webengineering-fhnw.github.io/webcl-fs-20/week5/person/View.html)
