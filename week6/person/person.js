@@ -8,7 +8,7 @@ const style = document.createElement("STYLE");
 style.innerHTML = pageCss;
 document.head.appendChild(style);
 
-const ALL_ATTRIBUTE_NAMES = ['firstname', 'lastname'];
+const ALL_ATTRIBUTE_NAMES = ['firstname', 'lastname','job'];
 
 const Person = () => {                               // facade
     const firstnameAttr = Attribute("Monika");
@@ -17,12 +17,16 @@ const Person = () => {                               // facade
     const lastnameAttr  = Attribute("Mustermann");
     lastnameAttr.getObs(LABEL).setValue("Last Name");
 
-    // lastnameAttr.setConverter( input => input.toUpperCase() );
-    // lastnameAttr.setValidator( input => input.length >= 3   );
+    const jobAttr  = Attribute("boss");
+    jobAttr.getObs(LABEL).setValue("My crazy job");
+
+    jobAttr.setConverter( input => input.toUpperCase() );
+    jobAttr.setValidator( input => input.length >= 3   );
 
     return {
         firstname:          firstnameAttr,
         lastname:           lastnameAttr,
+        job:                 jobAttr,
     }
 };
 
@@ -31,7 +35,7 @@ const Person = () => {                               // facade
 const MasterView = (listController, selectionController, rootElement) => {
 
     const render = person =>
-        listItemProjector(listController, selectionController, rootElement, person, ALL_ATTRIBUTE_NAMES);
+        listItemProjector(listController, selectionController, rootElement, person, ['firstname','lastname']);
 
     // binding
     listController.onModelAdd(render);
@@ -39,8 +43,7 @@ const MasterView = (listController, selectionController, rootElement) => {
 
 const NoPerson = (() => { // one time creation, singleton
     const johnDoe = Person();
-    johnDoe.firstname.setConvertedValue("");
-    johnDoe.lastname.setConvertedValue("");
+    ALL_ATTRIBUTE_NAMES.forEach(name => johnDoe[name].setConvertedValue(""));
     return johnDoe;
 })();
 

@@ -20,7 +20,7 @@ personSuite.add("crud", assert => {
     MasterView(masterController, selectionController, masterContainer);
     DetailView(selectionController, detailContainer);
 
-    const elementsPerRow = 3;
+    const elementsPerRow = 4;
 
     assert.is(masterContainer.children.length, 0*elementsPerRow);
 
