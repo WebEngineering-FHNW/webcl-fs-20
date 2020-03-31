@@ -1,0 +1,80 @@
+:root {
+  --md-input-placeholder-font-size: 36px;
+  --md-input-placeholder-font-size-small: 12px;
+
+  --md-input-size: 40px;
+  --md-input-width: 400px;
+  --md-outlined-padding: 10px;
+
+  --primary-color: darkorange;
+}
+
+body {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.material-input-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.material-input-wrapper > label {
+  position: relative;
+  top: 0;
+  left: -4px;
+  color: gray;
+  cursor: text;
+  margin-left: calc(-1 * var(--md-input-width)); /* Move Label over <input> */
+
+  font-size: var(--md-input-placeholder-font-size);
+  transition: ease-in-out .2s;
+}
+
+.material-input-wrapper > input[type=text] {
+  outline: none; /* Disable default input outline */
+  height: var(--md-input-size);
+  width: var(--md-input-width);
+  font-size: var(--md-input-placeholder-font-size);
+  border: 0;
+  border-bottom: 1px solid black;
+  background-size: 0 1px;
+}
+
+
+/* Animated bottom border (if not outlined) */
+.material-input-wrapper > input[type=text]:not(.outlined):focus {
+  border-color: transparent;
+  background-image: linear-gradient(var(--primary-color), var(--primary-color));
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: center bottom;
+  transition: background-size linear .2s;
+}
+
+/** Outlined material-inputs */
+.material-input-wrapper > input[type=text].outlined {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: calc(var(--md-outlined-padding));
+}
+.material-input-wrapper > input[type=text].outlined:focus {
+  border-color: var(--primary-color);
+}
+.material-input-wrapper > input[type=text].outlined + label {
+  background-color: white;
+  margin-left: calc(-1 * var(--md-input-width) - var(--md-outlined-padding)); /* Added additional margin for padding */
+}
+
+.material-input-wrapper > input[type=text].outlined:not(:placeholder-shown) + label {
+  padding-left: calc(var(--md-outlined-padding) / 2); /* Add a bit of whitespace on the left and right of the label */
+  padding-right: calc(var(--md-outlined-padding) / 2);
+  left: calc(-1 * var(--md-outlined-padding)); /* Offset padding */
+}
+
+/* If the input is dirty (placeholder is not shown) move to top and make text smaller */
+.material-input-wrapper > input[type=text]:focus + label,
+.material-input-wrapper > input[type=text]:not(:placeholder-shown) + label {
+  top: calc(-1 * var(--md-input-size));
+  font-size: var(--md-input-placeholder-font-size-small);
+}

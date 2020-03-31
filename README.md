@@ -28,3 +28,8 @@ How to build a button with a rainbow colored back blur using an anchor element
     - using [filter](https://developer.mozilla.org/de/docs/Web/CSS/filter)
     - using [linear-gradient](https://developer.mozilla.org/de/docs/Web/CSS/linear-gradient)
 - [The projector pattern - Persons](https://webengineering-fhnw.github.io/webcl-fs-20/week5/person/View.html)
+
+## week 7
+- table projector
+    - [solution 1](https://github.com/WebEngineering-FHNW/webcl-fs-20/pull/10/commits/ad4f0fe5b671fda08b1a726b9d70716bdbad0f37)
+    - [solution 2](https://gitlab.fhnw.ch/lion/webcl-person-master-view-table-style)
