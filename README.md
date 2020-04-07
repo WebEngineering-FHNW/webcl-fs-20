@@ -29,6 +29,20 @@ How to build a button with a rainbow colored back blur using an anchor element
     - using [linear-gradient](https://developer.mozilla.org/de/docs/Web/CSS/linear-gradient)
 - [The projector pattern - Persons](https://webengineering-fhnw.github.io/webcl-fs-20/week5/person/View.html)
 
+## week 6
+How to build an animated underline to mimic Material Design text fields
+- [CSS Goodie - animated underline](https://webengineering-fhnw.github.io/webcl-fs-20/week6/person/View.html)
+- [CSS Goodie - animated underline css](https://webengineering-fhnw.github.io/webcl-fs-20/week6/person/instantUpdateProjector.css)
+    - using [background-image](https://developer.mozilla.org/de/docs/Web/CSS/background-image)
+    - using [background-position](https://developer.mozilla.org/de/docs/Web/CSS/background-position)
+    - using [background-repeat](https://developer.mozilla.org/de/docs/Web/CSS/background-repeat)
+    - using [background-size](https://developer.mozilla.org/de/docs/Web/CSS/background-size)
+    - using [transition](https://developer.mozilla.org/de/docs/Web/CSS/transition)
+    
+This week we generalized the Person projector, so that it may also be used with other models
+- [The projector pattern - Persons](https://webengineering-fhnw.github.io/webcl-fs-20/week6/person/View.html)
+- [The projector pattern - Persons js](https://webengineering-fhnw.github.io/webcl-fs-20/week6/person/instantUpdateProjector.js)
+
 ## week 7
 - table projector
     - [solution 1](https://github.com/WebEngineering-FHNW/webcl-fs-20/pull/10/commits/ad4f0fe5b671fda08b1a726b9d70716bdbad0f37)
