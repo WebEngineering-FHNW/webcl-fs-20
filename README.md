@@ -48,3 +48,12 @@ In the following Canvas Gauge example you may explore how the Canvas-Element, wh
     - [Canvas Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Canvas)
     - [Canvas Tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
 
+## week 8
+In this CSS Goodie, you may learn how to implement a spotlight feature. While pressing the ALT-Key on your keyboard, a 
+spotlight effect is displayed arround your mouse. With this kind of effect, you may draw user attention to the spot 
+arround your cursor.
+- [CSS Goodie - Spotlight](https://webengineering-fhnw.github.io/webcl-fs-20/week8/CssSpotlight.html)
+    - using [mousemove event](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event)
+    - using [translateX CSS transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX)
+- [Bucket SVG Animation](https://webengineering-fhnw.github.io/webcl-fs-20/week8/svg-bucket-sketch/Bucket.html)
+- [Bucket WAF SVG Animation](https://webengineering-fhnw.github.io/webcl-fs-20/week8/svg-bucket-sketch/BucketWAF.html)
