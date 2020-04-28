@@ -50,10 +50,26 @@ In the following Canvas Gauge example you may explore how the Canvas-Element, wh
 
 ## week 8
 In this CSS Goodie, you may learn how to implement a spotlight feature. While pressing the ALT-Key on your keyboard, a 
-spotlight effect is displayed arround your mouse. With this kind of effect, you may draw user attention to the spot 
+spotlight effect is displayed around your mouse. With this kind of effect, you may draw user attention to the spot 
 arround your cursor.
 - [CSS Goodie - Spotlight](https://webengineering-fhnw.github.io/webcl-fs-20/week8/CssSpotlight.html)
     - using [mousemove event](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event)
     - using [translateX CSS transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX)
 - [Bucket SVG Animation](https://webengineering-fhnw.github.io/webcl-fs-20/week8/svg-bucket-sketch/Bucket.html)
 - [Bucket WAF SVG Animation](https://webengineering-fhnw.github.io/webcl-fs-20/week8/svg-bucket-sketch/BucketWAF.html)
+
+## week 10
+- Vue.js with SVG
+  [repository](https://github.com/dev-ale/webcl-2020-vue-svg-animation)
+  [live](https://svg-animation-vue.herokuapp.com/)
+- React with SVG
+  [repository](https://github.com/sabinamp/using-svg)
+  [pdf](https://github.com/sabinamp/using-svg/blob/9a2963fe283155a82a8612582fc2e58ff4cf291f/docs/SVGSignatureSketch_inReact.pdf)
+- Angular with SVG
+- optional: Mini
+  [repository](https://github.com/Dierk/fs19-wodss-client)
+  [live](https://dierk.github.io/fs19-wodss-client/ProjectAllocationBundle.html)
+
+
+
+
