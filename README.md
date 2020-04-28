@@ -83,10 +83,11 @@ SVG Animation of a signature where the lines are drawn one after the other by ma
 - Vue.js with SVG
   [repository](https://github.com/dev-ale/webcl-2020-vue-svg-animation)
   [live](https://svg-animation-vue.herokuapp.com/)
-- React with SVG
+- React and Web Components with SVG
   [repository](https://github.com/sabinamp/using-svg)
   [pdf](https://github.com/sabinamp/using-svg/blob/9a2963fe283155a82a8612582fc2e58ff4cf291f/docs/SVGSignatureSketch_inReact.pdf)
 - Angular with SVG
+  [repository](https://gitlab.fhnw.ch/damir.grgic/svg-eyes-angular)
 - optional: Mini
   [repository](https://github.com/Dierk/fs19-wodss-client)
   [live](https://dierk.github.io/fs19-wodss-client/ProjectAllocationBundle.html)
