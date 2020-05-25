@@ -92,3 +92,17 @@ SVG Animation of a signature where the lines are drawn one after the other by ma
   [repository](https://github.com/Dierk/fs19-wodss-client)
   [live](https://dierk.github.io/fs19-wodss-client/ProjectAllocationBundle.html)
 
+## week 12
+In the following CSS goodie, you may learn how to use the `background-color` and CSS filter-functions to create harmonic
+color palettes like complements, triadic palettes, splits or nearby colors.
+- [CSS Goodie - Calculated Colors](https://webengineering-fhnw.github.io/webcl-fs-20/week12/CalculatedColors.html)
+    - using [hue-rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/hue-rotate)
+    - using [saturate](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate)
+    - using [brigthness](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness)
+
+## week 13
+Create a glossy effect for buttons by applying a radial gradient to the `background-image` and stretching the `background-size`
+- [CSS Goodie - Glossy](https://webengineering-fhnw.github.io/webcl-fs-20/week13/Glossy.html)
+- [CSS Goodie - Glossy Hover](https://webengineering-fhnw.github.io/webcl-fs-20/week13/Glossy-hover.html)
+    - using [radial-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient)
+    - using [custom property fallback values](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#Custom_property_fallback_values)
