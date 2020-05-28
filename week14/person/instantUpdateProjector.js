@@ -70,8 +70,8 @@ const listItemProjector = (masterController, selectionController, rootElement, m
 
     if(rootElement.style['grid-template-columns'] === '') {
         rootElement.classList.add(masterClassName);
-        const columStyle = '1.7em '+ attributeNames.map(x=>'auto').join(' ');
-        rootElement.style['grid-template-columns'] = columStyle;
+        const columnStyle = '1.7em '+ attributeNames.map(x=>'auto').join(' ');
+        rootElement.style['grid-template-columns'] = columnStyle;
     }
 
     const deleteButton      = document.createElement("Button");

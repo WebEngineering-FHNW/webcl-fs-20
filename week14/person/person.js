@@ -27,6 +27,7 @@ const Person = () => {                               // facade
     return {
         firstname:          firstnameAttr,
         lastname:           lastnameAttr,
+        toString: () => firstnameAttr.getObs(VALUE).getValue() + " " + lastnameAttr.getObs(VALUE).getValue(),
     }
 };
 
@@ -49,8 +50,8 @@ const MasterView = (listController, selectionController, rootElement) => {
 };
 
 const reset = person => {
-    person.firstname.setQualifier(undefined);
-    person.lastname.setQualifier(undefined);
+    person.firstname.setQualifier(undefined);  // todo: make generic, unset all qualifiers
+    person.lastname.setQualifier(undefined);   //       set DISABLED attribute
     person.firstname.setConvertedValue("");
     person.lastname.setConvertedValue("");
     return person;
@@ -64,7 +65,12 @@ const DetailView = (selectionController, rootElement) => {
 
     selectionController.onModelSelected( selectedPersonModel => { // todo: make this generic
         // set the qualifiers to connect detailModel with current selection
+        // todo: set the values for _all_ observables
+
         selectionMold.lastname.setQualifier(selectedPersonModel.lastname.getQualifier());
+        selectionMold.lastname.getObs(VALUE).setValue(selectedPersonModel.lastname.getObs(VALUE).getValue());
+
         selectionMold.firstname.setQualifier(selectedPersonModel.firstname.getQualifier());
+        selectionMold.firstname.getObs(VALUE).setValue(selectedPersonModel.firstname.getObs(VALUE).getValue());
     });
 };
