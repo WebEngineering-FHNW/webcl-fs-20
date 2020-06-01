@@ -19,6 +19,8 @@ const ListController = modelConstructor => {
 };
 
 const noSelection = reset(Person());
+noSelection.firstname.setQualifier("Person.none.firstname");
+noSelection.lastname .setQualifier("Person.none.lastname");
 
 const SelectionController = model => {
 
