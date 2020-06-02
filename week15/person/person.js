@@ -21,12 +21,15 @@ const Person = () => {                               // facade
     const lastnameAttr  = Attribute("Mustermann", `Person.${id}.lastname`);
     lastnameAttr.getObs(LABEL).setValue("Last Name");
 
+    const detailedAttr  = Attribute(true, `Person.${id}.detailed`);
+
     lastnameAttr.setConverter( input => input.toUpperCase() );  // enable for playing around
     lastnameAttr.setValidator( input => input.length >= 3   );
 
     return {
         firstname:          firstnameAttr,
         lastname:           lastnameAttr,
+        detailed:           detailedAttr,
         toString: () => firstnameAttr.getObs(VALUE).getValue() + " " + lastnameAttr.getObs(VALUE).getValue(),
     }
 };
@@ -67,10 +70,10 @@ const DetailView = (selectionController, rootElement) => {
         // set the qualifiers to connect detailModel with current selection
         // todo: set the values for _all_ observables
 
-        selectionMold.lastname.setQualifier(selectedPersonModel.lastname.getQualifier());
-        // selectionMold.lastname.getObs(VALUE).setValue(selectedPersonModel.lastname.getObs(VALUE).getValue());
-
         selectionMold.firstname.setQualifier(selectedPersonModel.firstname.getQualifier());
-        // selectionMold.firstname.getObs(VALUE).setValue(selectedPersonModel.firstname.getObs(VALUE).getValue());
+        selectionMold.lastname .setQualifier(selectedPersonModel.lastname.getQualifier());
+        selectionMold.detailed .setQualifier(selectedPersonModel.detailed.getQualifier());
     });
+
+    selectionController.clearSelection();
 };
