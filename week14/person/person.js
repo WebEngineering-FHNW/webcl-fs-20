@@ -67,10 +67,9 @@ const DetailView = (selectionController, rootElement) => {
         // set the qualifiers to connect detailModel with current selection
         // todo: set the values for _all_ observables
 
-        selectionMold.lastname.setQualifier(selectedPersonModel.lastname.getQualifier());
-        // selectionMold.lastname.getObs(VALUE).setValue(selectedPersonModel.lastname.getObs(VALUE).getValue());
-
+        selectionMold.lastname .setQualifier(selectedPersonModel.lastname.getQualifier());
         selectionMold.firstname.setQualifier(selectedPersonModel.firstname.getQualifier());
         // selectionMold.firstname.getObs(VALUE).setValue(selectedPersonModel.firstname.getObs(VALUE).getValue());
     });
+    selectionController.clearSelection();
 };
