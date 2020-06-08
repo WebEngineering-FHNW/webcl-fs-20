@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goodie</title>
+  <style>
+      body {
+          margin: 4rem;
+          box-sizing: border-box;
+      }
+      nav {
+          position: relative;
+      }
+      nav a {
+          margin: 0 1em 0 0 ;
+          font-family: "Helvetica Neue", "sans-serif";
+          font-size: larger;
+          color: darkblue;
+          text-decoration: none;
+          text-transform: uppercase;
+      }
+  </style>
+</head>
+
+<body>
+<nav>
+    <a href="#">One</a>
+    <a href="#">Two</a>
+    <a href="#">Three</a>
+    <a href="#">Fooooouuuur</a>
+    <a href="#">5</a>
+</nav>
+
+<main>
+    <div>
+    <h1>Goodie</h1>
+        <p>Once, in a galaxy far, far away ...</p>
+    <p>Some blind text. Some blind text. Some blind text. Some blind text. Some blind text.
+        Some blind text. Some blind text. Some blind text. Some blind text. Some blind text.
+        Some blind text. Some blind text. Some blind text. Some blind text. Some blind text.
+    </p>
+    </div>
+</main>
+
+<script>
+    const marker  = document.querySelector("nav #marker");
+    const anchors = document.querySelectorAll("nav a");
+    const indicator = evt => {
+        marker.style.left  = evt.target.offsetLeft + "px";
+        marker.style.width = evt.target.offsetWidth + "px";
+    }
+    anchors.forEach( anchor => anchor.addEventListener("click", indicator) )
+
+</script>
+
+</body>
+</html>
