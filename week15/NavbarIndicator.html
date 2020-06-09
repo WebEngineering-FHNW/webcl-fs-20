@@ -18,11 +18,22 @@
           text-decoration: none;
           text-transform: uppercase;
       }
+      nav #marker {
+          position: absolute;
+          left: 0;
+          width: 0;
+          background: darkmagenta;
+          height: .2em;
+          bottom: -0.2em;
+          transition: all linear .3s ;
+      }
+
   </style>
 </head>
 
 <body>
 <nav>
+    <div id="marker"></div>
     <a href="#">One</a>
     <a href="#">Two</a>
     <a href="#">Three</a>
